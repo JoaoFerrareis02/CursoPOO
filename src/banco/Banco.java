@@ -28,9 +28,21 @@ public class Banco {
 		c2.saldo = 150.0;
 		c2.limite = 200.0;
 
-		System.out.println(c1.saldo);
-		System.out.println(c1.titular.nome);
-		System.out.println("Saldo da conta" + c2.numero + " :" + c2.saldo);
+		c1.extrato();
+		c2.extrato();
+
+		c1.sacar(150);
+		c1.transferir(100, c2);
+		c1.sacar(100);
+		c1.depositar(100);
+		c1.transferir(200, c2);
+
+		for (int i = 1; i <= 120; i++) {
+			c1.chequeEspecial(0.5);
+			if (i % 30 == 0) {
+				System.out.println("Saldo apos " + i + " dia: " + c1.saldo);
+			}
+		}
 
 	}
 
