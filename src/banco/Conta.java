@@ -7,6 +7,13 @@ public class Conta {
 	double saldo;
 	double limite;
 
+	public Conta(String numero, Pessoa titular) {
+		this.numero = numero;
+		this.titular = titular;
+		saldo = 0;
+		limite = 200;
+	}
+
 	double disponivel() {
 		return saldo + limite;
 	}
