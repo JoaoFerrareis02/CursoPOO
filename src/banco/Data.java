@@ -16,4 +16,12 @@ public class Data {
 		System.out.println(dia + "/" + mes + "/" + ano);
 	}
 
+	boolean maior(Data d2) {
+		if ((ano > d2.ano) || ((ano == d2.ano) && (mes > d2.mes)) || ((ano == d2.ano) && (mes == d2.mes) && (dia > d2.dia))) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }
